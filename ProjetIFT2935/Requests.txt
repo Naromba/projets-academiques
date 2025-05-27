@@ -1,0 +1,142 @@
+1. Situation des adhérents
+SQL :
+SELECT a.nom, COUNT(e), SUM(CASE WHEN ... THEN 1 ELSE 0 END)
+FROM Emprunt e JOIN Adherant a ON e.ID = a.ID
+GROUP BY a.nom;
+
+Algèbre relationnelle :
+π_nom, COUNT(e.id_emprunt), SUM_retards(
+  σ(make_date(annee_retour, mois_retour, jour_retour) > make_date(annee_debut, mois_debut, jour_debut) + 14)
+  (Emprunt ⨝ Emprunt.ID = Adherant.ID Adherant)
+)
+
+Optimisation :
+Index sur Emprunt.ID (idx_emprunt_id) pour accélérer la jointure.
+
+Calcul des retards avec make_date délégué au moteur PostgreSQL pour meilleure performance.
+
+Agrégation groupée par nom évite les regroupements manuels coûteux.
+
+2. Répartition des emprunts par genre
+SQL :
+SELECT l.genre, COUNT(e)
+FROM Emprunt e JOIN Livre l ON e.isbn = l.ISBN
+GROUP BY l.genre
+ORDER BY COUNT(e) DESC;
+
+Algèbre relationnelle :
+π_genre, COUNT(id_emprunt)(
+  (Emprunt ⨝ Emprunt.isbn = Livre.ISBN Livre)
+  GROUP BY genre
+)
+
+Optimisation :
+Jointure sur champ indexé ISBN.
+
+Agrégation via COUNT() directement sur base groupée (évite sous-requêtes).
+
+Index possible sur Livre.genre pour futures requêtes statistiques.
+
+3.Livres les plus empruntés
+SQL :
+SELECT l.titre, COUNT(e)
+FROM Emprunt e JOIN Livre l ON e.isbn = l.ISBN
+GROUP BY l.titre
+ORDER BY COUNT(e) DESC
+LIMIT 3;
+
+Algèbre relationnelle :
+π_titre, COUNT(id_emprunt)(
+  (Emprunt ⨝ Emprunt.isbn = Livre.ISBN Livre)
+  GROUP BY titre
+)
+
+
+Optimisation :
+LIMIT 3 permet de ne récupérer que les 3 lignes les plus pertinentes.
+
+Optimisé pour indexation sur titre ou isbn.
+
+Bonne sélectivité due à ORDER BY COUNT DESC.
+
+4. Répartition des commandes par état
+SQL :
+SELECT c.etat, COUNT(c)
+FROM Commande c
+GROUP BY c.etat
+ORDER BY COUNT(c) DESC;
+
+
+Algèbre relationnelle :
+π_etat, COUNT(numero_commande)(Commande GROUP BY etat)
+
+Optimisation :
+Agrégation directe sans jointure.
+
+L'index naturel sur etat améliore le regroupement.
+
+Utilisation de ORDER BY COUNT DESC améliore pertinence.
+
+5. Emprunts par année d’inscription
+SQL :
+SELECT a.anneeInscription, COUNT(e)
+FROM Emprunt e JOIN Adherant a ON e.ID = a.ID
+GROUP BY a.anneeInscription
+ORDER BY a.anneeInscription;
+
+Algèbre relationnelle :
+π_anneeInscription, COUNT(e.id_emprunt)(
+  Emprunt ⨝ Emprunt.ID = Adherant.ID Adherant
+  GROUP BY anneeInscription
+)
+
+
+Optimisation :
+Tri déjà optimisé par indexation sur anneeInscription.
+
+Agrégation via GROUP BY native au moteur.
+
+6. Adhérents ayant 3 commandes
+SQL :
+SELECT a.nom, COUNT(c)
+FROM Commande c JOIN Adherant a ON c.ID = a.ID
+GROUP BY a.nom
+HAVING COUNT(c) = 3;
+
+
+Algèbre relationnelle :
+σ_COUNT=3(
+  π_nom, COUNT(c.numero_commande)(
+    Commande ⨝ Commande.ID = Adherant.ID Adherant
+    GROUP BY nom
+  )
+)
+
+
+Optimisation :
+HAVING filtre directement après agrégation.
+
+Index sur Commande.ID accélère jointure.
+
+7. Emprunts par genre et année d’inscription
+SQL :
+SELECT a.anneeInscription, l.genre, COUNT(e)
+FROM Emprunt e JOIN Adherant a ON e.ID = a.ID
+JOIN Livre l ON e.isbn = l.ISBN
+GROUP BY a.anneeInscription, l.genre
+ORDER BY a.anneeInscription, COUNT(e) DESC;
+
+Algèbre relationnelle :
+π_anneeInscription, genre, COUNT(id_emprunt)(
+  ((Emprunt ⨝ Emprunt.ID = Adherant.ID Adherant)
+    ⨝ Emprunt.isbn = Livre.ISBN Livre)
+  GROUP BY anneeInscription, genre
+)
+
+
+Optimisation :
+Double jointure bien indexée (sur isbn et ID).
+
+Tri combiné (ORDER BY anneeInscription, COUNT DESC) pour hiérarchiser.
+
+Résultats groupés pour rapport synthétique.
