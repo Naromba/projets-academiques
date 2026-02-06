@@ -1,0 +1,8 @@
+Amélioration du pipeline de tests de GraphHopper : ajout d’une vérification automatique du score de mutation dans la CI pour empêcher les régressions, 
+création de nouveaux tests unitaires avec Mockito pour les classes centrales, correction du script de parsing PIT et intégration d’une action GitHub humoristique (rickroll) 
+en cas d’échec des tests.
+
+
+Lien vers le repo : https://github.com/Aissatou26/graphhopper
+
+Lien vers le rapport : https://github.com/Aissatou26/graphhopper/blob/master/rapport.md
