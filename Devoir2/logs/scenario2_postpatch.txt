@@ -1,0 +1,442 @@
+
+=== SCÉNARIO 2: Canal bruité ===
+[Canal] Initialisé → erreur=0.05, perte=0.1, delaiMax=200 ms
+13:50:02.089 | SYS | Python=3.13.5 | OS=Darwin-25.1.0
+13:50:02.090 | SYS | Message: 6300 octets | timeout=500 ms | W=4 | MOD=8
+13:50:02.090 | TX  | ENVOI <DATA seq=0 ack=7 len=100 crc=C1E6> (timeout=500 ms)
+[Canal]  Transmission (+167 ms) : <DATA seq=0 ack=7 len=100 crc=C1E6>
+13:50:02.090 | TX  | ENVOI <DATA seq=1 ack=7 len=100 crc=7581> (timeout=500 ms)
+[Canal]  Transmission (+74 ms) : <DATA seq=1 ack=7 len=100 crc=7581>
+13:50:02.090 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+46 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:02.090 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+112 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+[Canal]  Trame livrée : <DATA seq=0 ack=7 len=100 crc=C1E6>
+13:50:02.140 | RX  | RECEPTION <DATA seq=0 ack=7 len=100 crc=C1E6> | CRC=OK
+13:50:02.140 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+24 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=1 ack=7 len=100 crc=7581>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:02.168 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:02.169 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+111 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:02.207 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:02.207 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+148 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:02.281 | TX  | ACK RECU a=0
+13:50:02.284 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+67 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:02.356 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:02.356 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:02.356 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+171 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:02.531 | TX  | ACK RECU a=0
+13:50:02.595 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:02.596 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+99 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:02.596 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:02.596 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+153 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:02.697 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:02.697 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+62 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:02.751 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:02.751 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+14 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:02.764 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:02.768 | TX  | ACK RECU a=0
+13:50:02.787 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:02.787 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+69 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:02.861 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:02.861 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+18 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:02.884 | TX  | ACK RECU a=0
+13:50:03.101 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:03.101 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+52 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:03.101 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:03.101 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+54 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:03.158 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:03.158 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame perdue : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:03.158 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:03.159 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+155 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:03.292 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:03.292 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+145 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:03.318 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:03.441 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:03.441 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+155 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:03.602 | TX  | ACK RECU a=0
+13:50:03.603 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:03.603 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+115 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:03.606 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:03.606 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Trame perdue : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:03.723 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:03.723 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+158 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:03.798 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:03.798 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+185 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:03.885 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:03.988 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:03.988 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+103 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:04.095 | TX  | ACK RECU a=0
+13:50:04.105 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:04.105 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+147 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:04.111 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:04.111 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+66 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:04.178 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:04.178 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+105 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:04.257 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:04.257 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame perdue : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:04.288 | TX  | ACK RECU a=0
+13:50:04.304 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:04.304 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+156 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:04.462 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:04.462 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+142 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:04.609 | TX  | ACK RECU a=0
+13:50:04.610 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:04.610 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+117 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:04.615 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:04.615 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Trame perdue : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:04.732 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:04.733 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal] Trame corrompue : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+37 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:04.772 | TX  | ACK RECU a=0
+13:50:04.804 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:04.804 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+29 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:04.835 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:04.835 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+54 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:04.892 | TX  | ACK RECU a=0
+13:50:05.111 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:05.111 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Trame perdue : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:05.120 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:05.120 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Trame perdue : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:05.310 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:05.310 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+53 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:05.367 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:05.367 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+37 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:05.407 | TX  | ACK RECU a=0
+13:50:05.616 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:05.616 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+182 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:05.624 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:05.624 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+160 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:05.786 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:05.786 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+180 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:05.802 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:05.802 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame perdue : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:05.813 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:05.813 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+17 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:06.121 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:06.121 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+112 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:06.128 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:06.128 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+49 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:06.182 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:06.182 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame perdue : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:06.239 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:06.239 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+69 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:06.311 | TX  | ACK RECU a=0
+13:50:06.320 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:06.320 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+191 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:06.513 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:06.514 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+10 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:06.526 | TX  | ACK RECU a=0
+13:50:06.627 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:06.627 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+191 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:06.631 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:06.631 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+129 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:06.761 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:06.762 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal] Trame corrompue : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+15 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:06.826 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:06.826 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+156 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:06.987 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:06.987 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame perdue : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:07.129 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:07.129 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Trame perdue : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:07.137 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:07.137 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+17 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:07.155 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:07.155 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+99 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:07.259 | TX  | ACK RECU a=0
+13:50:07.331 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:07.331 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+8 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:07.340 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:07.340 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+58 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:07.402 | TX  | ACK RECU a=0
+13:50:07.634 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:07.634 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+184 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:07.643 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:07.643 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+104 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:07.753 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:07.753 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+183 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:07.819 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:07.819 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal] Trame corrompue : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+89 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:07.835 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:07.835 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+85 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:07.908 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:08.138 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:08.138 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+61 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:08.149 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:08.149 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+196 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:08.201 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+13:50:08.201 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+110 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:08.340 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:08.340 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+171 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:08.516 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:08.516 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+45 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:08.566 | TX  | ACK RECU a=0
+13:50:08.644 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:08.644 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal] Trame corrompue : <DATA seq=3 ack=7 len=100 crc=B3DC>
+[Canal]  Transmission (+171 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:08.654 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:08.654 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+81 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:08.738 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=FAIL
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:08.818 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:08.818 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+186 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:08.842 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:08.842 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+165 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:09.006 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:09.011 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:09.011 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+40 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:09.052 | TX  | ACK RECU a=0
+13:50:09.147 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:09.147 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+88 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:09.157 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:09.157 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+26 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:09.187 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=FAIL
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:09.239 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:09.239 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+110 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:09.344 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:09.344 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+39 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:09.352 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:09.385 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:09.385 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+29 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:09.418 | TX  | ACK RECU a=0
+13:50:09.648 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:09.648 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+118 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:09.661 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:09.661 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+184 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:09.771 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=FAIL
+13:50:09.847 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:09.847 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+130 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:09.850 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:09.850 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+28 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:10.153 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:10.153 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+66 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:10.166 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:10.166 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+176 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:10.225 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=FAIL
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:10.347 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:10.347 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal] Trame corrompue : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+7 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:10.351 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:10.351 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Trame perdue : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:10.356 | TX  | ACK RECU a=0
+13:50:10.657 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:10.657 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+127 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:10.670 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:10.670 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+184 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:10.785 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=FAIL
+13:50:10.856 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:10.856 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+164 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:10.858 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+13:50:10.858 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+127 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:11.159 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:11.159 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+200 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:11.175 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:11.175 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal] Trame corrompue : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Transmission (+87 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:11.267 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=FAIL
+13:50:11.358 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:11.358 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Transmission (+59 ms) : <DATA seq=4 ack=0 len=100 crc=925F>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:11.360 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=FAIL
+[Canal]  Trame livrée : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:11.422 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+13:50:11.422 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+10 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+13:50:11.434 | TX  | ACK RECU a=0
+13:50:11.661 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+13:50:11.662 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> (timeout=500 ms)
+[Canal]  Transmission (+13 ms) : <DATA seq=3 ack=7 len=100 crc=B3DC>
+[Canal]  Trame livrée : <DATA seq=3 ack=7 len=100 crc=B3DC>
+13:50:11.675 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=FAIL
+13:50:11.676 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+13:50:11.676 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> (timeout=500 ms)
+[Canal]  Transmission (+117 ms) : <DATA seq=2 ack=7 len=100 crc=950E>
+[Canal]  Trame livrée : <DATA seq=2 ack=7 len=100 crc=950E>
+13:50:11.797 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=FAIL
+13:50:11.862 | TX  | TIMEOUT seq=4 → RETRANSMISSION
+13:50:11.862 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> (timeout=500 ms)
+[Canal]  Trame perdue : <DATA seq=4 ack=0 len=100 crc=925F>
+13:50:12.092 | SYS | Durée limite 10s atteinte — arrêt du protocole.
+
+Transmission terminée.
+Frames envoyées : 5
+Frames retransmises : 57
+ACK reçus : 27
+Durée totale : 10.002 s
+Intégrité message : ECHEC

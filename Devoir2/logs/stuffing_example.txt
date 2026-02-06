@@ -1,0 +1,9 @@
+Input bits:    011111101111101111110111110
+Stuffed bits:  0111110101111100111110101111100
+Destuffed bits:011111101111101111110111110
+
+Orig bytes (hex): 7efbf7c0
+Dest bytes (hex): 7efbf7c0
+CRC orig:  0x2456
+CRC dest:  0x2456
+CRC equal: True

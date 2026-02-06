@@ -1,0 +1,471 @@
+
+=== SCÉNARIO 2: Canal bruité ===
+[Canal] Initialisé → erreur=0.05, perte=0.1, delaiMax=300 ms
+19:43:35.168 | SYS | Python=3.13.5 | OS=Darwin-25.1.0
+19:43:35.169 | SYS | Message: 6300 octets | timeout=700 ms | W=4 | MOD=8
+19:43:35.169 | TX  | ENVOI <DATA seq=0 ack=7 len=100 crc=C1E6> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+181 ms) : b'~\x00\x00\x07dThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selective\xc1\xe6~'
+19:43:35.169 | TX  | ENVOI <DATA seq=1 ack=7 len=100 crc=7581> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+174 ms) : b'~\x00\x01\x07d Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a tu\x81~'
+19:43:35.170 | TX  | ENVOI <DATA seq=2 ack=7 len=100 crc=950E> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+16 ms) : b'~\x00\x02\x07dest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pro\x8a\x87\x00~'
+19:43:35.170 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=B3DC> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+295 ms) : b'~\x00\x03\x07dtocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line fo\x99\xee\x00~'
+[Canal]  Trame livrée : b'~\x00\x00\x07dThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selective\xc1\xe6~'
+19:43:35.188 | RX  | RECEPTION <DATA seq=0 ack=7 len=100 crc=C1E6> | CRC=OK
+19:43:35.188 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+64 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : b'~\x00\x01\x07d Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a tu\x81~'
+19:43:35.257 | RX  | RECEPTION <DATA seq=1 ack=7 len=100 crc=7581> | CRC=OK
+19:43:35.257 | RX  | ACK-> <ACK seq=0 ack=1 len=0 crc=C145>
+[Canal]  Transmission (+222 ms) : <ACK seq=0 ack=1 len=0 crc=C145>
+[Canal]  Trame livrée : b'~\x00\x02\x07dest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pro\x8a\x87\x00~'
+19:43:35.346 | RX  | RECEPTION <DATA seq=2 ack=7 len=100 crc=950E> | CRC=OK
+19:43:35.346 | RX  | ACK-> <ACK seq=0 ack=2 len=0 crc=9416>
+[Canal]  Transmission (+105 ms) : <ACK seq=0 ack=2 len=0 crc=9416>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line fo\x99\xee\x00~'
+19:43:35.351 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=B3DC> | CRC=OK
+19:43:35.351 | RX  | ACK-> <ACK seq=0 ack=3 len=0 crc=A727>
+[Canal]  Transmission (+37 ms) : <ACK seq=0 ack=3 len=0 crc=A727>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+19:43:35.392 | TX  | ACK RECU a=0
+19:43:35.394 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=925F> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+283 ms) : b'~\x00\x04\x00dr the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol messa\x92_\x00~'
+[Canal]  Trame livrée : <ACK seq=0 ack=1 len=0 crc=C145>
+19:43:35.456 | TX  | ACK RECU a=1
+19:43:35.457 | TX  | ENVOI <DATA seq=5 ack=1 len=100 crc=EC80> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+188 ms) : b'~\x00\x05\x01dge.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selec\xe6@\x00~'
+[Canal]  Trame livrée : <ACK seq=0 ack=2 len=0 crc=9416>
+19:43:35.466 | TX  | ACK RECU a=2
+19:43:35.468 | TX  | ENVOI <DATA seq=6 ack=2 len=100 crc=1B27> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+163 ms) : b"~\x00\x06\x02dtive Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is\x1b'~"
+[Canal]  Trame livrée : <ACK seq=0 ack=3 len=0 crc=A727>
+19:43:35.480 | TX  | ACK RECU a=3
+19:43:35.480 | TX  | ENVOI <DATA seq=7 ack=3 len=100 crc=CB50> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+194 ms) : b'~\x00\x07\x03d a test line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat\xcbP~'
+[Canal]  Trame livrée : b'~\x00\x04\x00dr the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol messa\x92_\x00~'
+19:43:35.636 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=925F> | CRC=OK
+19:43:35.636 | RX  | ACK-> <ACK seq=0 ack=4 len=0 crc=3EB0>
+[Canal]  Transmission (+12 ms) : <ACK seq=0 ack=4 len=0 crc=3EB0>
+[Canal]  Trame livrée : b'~\x00\x05\x01dge.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selec\xe6@\x00~'
+19:43:35.650 | RX  | RECEPTION <DATA seq=5 ack=1 len=100 crc=EC80> | CRC=OK
+19:43:35.650 | RX  | ACK-> <ACK seq=0 ack=5 len=0 crc=0D81>
+[Canal]  Transmission (+201 ms) : <ACK seq=0 ack=5 len=0 crc=0D81>
+[Canal]  Trame livrée : b"~\x00\x06\x02dtive Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is\x1b'~"
+19:43:35.650 | RX  | RECEPTION <DATA seq=6 ack=2 len=100 crc=1B27> | CRC=OK
+19:43:35.651 | RX  | ACK-> <ACK seq=0 ack=6 len=0 crc=58D2>
+[Canal]  Transmission (+275 ms) : <ACK seq=0 ack=6 len=0 crc=58D2>
+[Canal]  Trame livrée : b'~\x00\x07\x03d a test line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat\xcbP~'
+19:43:35.677 | RX  | RECEPTION <DATA seq=7 ack=3 len=100 crc=CB50> | CRC=OK
+19:43:35.677 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+159 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=4 len=0 crc=3EB0>
+19:43:35.683 | TX  | ACK RECU a=4
+19:43:35.684 | TX  | ENVOI <DATA seq=0 ack=4 len=100 crc=7A05> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+224 ms) : b'~\x00\x00\x04d protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test linz\x05~'
+[Canal]  Trame livrée : <ACK seq=0 ack=5 len=0 crc=0D81>
+19:43:35.841 | TX  | ACK RECU a=5
+19:43:35.842 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=816B> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+183 ms) : b'~\x00\x01\x05de for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol m\x81k~'
+[Canal]  Trame livrée : <ACK seq=0 ack=6 len=0 crc=58D2>
+19:43:35.855 | TX  | ACK RECU a=6
+19:43:35.857 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=579A> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+223 ms) : b'~\x00\x02\x06dessage.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the SW\x9a~'
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:35.913 | TX  | ACK RECU a=7
+19:43:35.916 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=7063> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+190 ms) : b'~\x00\x03\x07delective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThipc~'
+[Canal]  Trame livrée : b'~\x00\x00\x04d protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test linz\x05~'
+19:43:35.930 | RX  | RECEPTION <DATA seq=0 ack=4 len=100 crc=7A05> | CRC=OK
+19:43:35.930 | RX  | ACK-> <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Transmission (+47 ms) : <ACK seq=0 ack=0 len=0 crc=F274>
+[Canal]  Trame livrée : b'~\x00\x01\x05de for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol m\x81k~'
+19:43:35.982 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=816B> | CRC=OK
+19:43:35.982 | RX  | ACK-> <ACK seq=0 ack=1 len=0 crc=C145>
+[Canal]  Transmission (+2 ms) : <ACK seq=0 ack=1 len=0 crc=C145>
+[Canal]  Trame livrée : b'~\x00\x02\x06dessage.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the SW\x9a~'
+19:43:35.985 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=579A> | CRC=OK
+19:43:35.985 | RX  | ACK-> <ACK seq=0 ack=2 len=0 crc=9416>
+[Canal]  Transmission (+4 ms) : <ACK seq=0 ack=2 len=0 crc=9416>
+[Canal]  Trame livrée : b'~\x00\x03\x07delective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThipc~'
+19:43:35.990 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=7063> | CRC=OK
+19:43:35.990 | RX  | ACK-> <ACK seq=0 ack=3 len=0 crc=A727>
+[Canal]  Transmission (+243 ms) : <ACK seq=0 ack=3 len=0 crc=A727>
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+19:43:36.025 | TX  | ACK RECU a=0
+19:43:36.028 | TX  | ENVOI <DATA seq=4 ack=0 len=100 crc=39CF> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+159 ms) : b'~\x00\x04\x00ds is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selective Re9\xcf~'
+[Canal]  Trame livrée : <ACK seq=0 ack=1 len=0 crc=C145>
+19:43:36.086 | TX  | ACK RECU a=1
+19:43:36.086 | TX  | ENVOI <DATA seq=5 ack=1 len=100 crc=1252> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+25 ms) : b'~\x00\x05\x01dpeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test\x12R~'
+[Canal]  Trame livrée : <ACK seq=0 ack=2 len=0 crc=9416>
+19:43:36.108 | TX  | ACK RECU a=2
+19:43:36.111 | TX  | ENVOI <DATA seq=6 ack=2 len=100 crc=E082> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+109 ms) : b'~\x00\x06\x02d line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protoc\xe0A\x00~'
+[Canal]  Trame livrée : <ACK seq=0 ack=3 len=0 crc=A727>
+19:43:36.116 | TX  | ACK RECU a=3
+19:43:36.116 | TX  | ENVOI <DATA seq=7 ack=3 len=100 crc=3913> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+182 ms) : b'~\x00\x07\x03dol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for t9\x13~'
+[Canal]  Trame livrée : b'~\x00\x04\x00ds is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selective Re9\xcf~'
+19:43:36.193 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=39CF> | CRC=OK
+19:43:36.193 | RX  | ACK-> <ACK seq=0 ack=4 len=0 crc=3EB0>
+[Canal]  Transmission (+141 ms) : <ACK seq=0 ack=4 len=0 crc=3EB0>
+[Canal]  Trame livrée : b'~\x00\x05\x01dpeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test\x12R~'
+19:43:36.226 | RX  | RECEPTION <DATA seq=5 ack=1 len=100 crc=1252> | CRC=OK
+19:43:36.226 | RX  | ACK-> <ACK seq=0 ack=5 len=0 crc=0D81>
+[Canal]  Transmission (+195 ms) : <ACK seq=0 ack=5 len=0 crc=0D81>
+[Canal]  Trame livrée : b'~\x00\x06\x02d line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protoc\xe0A\x00~'
+19:43:36.239 | RX  | RECEPTION <DATA seq=6 ack=2 len=100 crc=E082> | CRC=OK
+19:43:36.239 | RX  | ACK-> <ACK seq=0 ack=6 len=0 crc=58D2>
+[Canal]  Transmission (+58 ms) : <ACK seq=0 ack=6 len=0 crc=58D2>
+[Canal]  Trame livrée : b'~\x00\x07\x03dol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for t9\x13~'
+19:43:36.301 | RX  | RECEPTION <DATA seq=7 ack=3 len=100 crc=3913> | CRC=OK
+19:43:36.301 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+67 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=4 len=0 crc=3EB0>
+19:43:36.302 | TX  | ACK RECU a=4
+19:43:36.303 | TX  | ENVOI <DATA seq=0 ack=4 len=100 crc=BB57> -> 108 octets (timeout=700 ms)
+[Canal]  Trame perdue : b'~\x00\x00\x04dhe Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\xbbW~'
+[Canal]  Trame livrée : <ACK seq=0 ack=5 len=0 crc=0D81>
+19:43:36.339 | TX  | ACK RECU a=5
+19:43:36.341 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Trame perdue : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+[Canal]  Trame livrée : <ACK seq=0 ack=6 len=0 crc=58D2>
+19:43:36.373 | TX  | ACK RECU a=6
+19:43:36.374 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+182 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:36.426 | TX  | ACK RECU a=7
+19:43:36.428 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal] Trame corrompue : b'~\x00\x03\x07dtest line for the selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Transmission (+69 ms) : b'~\x00\x03\x07dtest line for the selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:36.503 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:36.503 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+70 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:36.559 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=FAIL
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:36.575 | TX  | ACK RECU a=7
+19:43:37.046 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:37.047 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Trame perdue : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:37.079 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:37.080 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+183 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:37.133 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:37.133 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+129 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:37.264 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:37.264 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+28 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:37.268 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:37.268 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+211 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:37.296 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:37.484 | TX  | ACK RECU a=7
+19:43:37.752 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:37.752 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+151 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:37.785 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:37.786 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+93 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:37.834 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:37.834 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+26 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:37.864 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:37.864 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+300 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:37.881 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:37.881 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+1 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:37.883 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:37.883 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal] Trame corrompue : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+240 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:37.907 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:38.126 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:38.170 | TX  | ACK RECU a=7
+19:43:38.453 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:38.454 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+68 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:38.491 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:38.492 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+32 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:38.526 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:38.526 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+207 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:38.527 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:38.527 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+88 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:38.536 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:38.536 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+222 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:38.620 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:38.738 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:38.761 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:38.761 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+102 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:38.869 | TX  | ACK RECU a=7
+19:43:39.159 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:39.159 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+39 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:39.194 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:39.194 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+248 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:39.200 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:39.200 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+65 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:39.241 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:39.241 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+22 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:39.269 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:39.269 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal] Trame corrompue : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+182 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:39.269 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:39.448 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:39.448 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+281 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:39.452 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:39.730 | TX  | ACK RECU a=7
+19:43:39.860 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:39.860 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+138 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:39.897 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:39.898 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+101 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:39.946 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:39.947 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+213 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:40.000 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:40.000 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+190 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:40.001 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:40.001 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+53 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:40.059 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:40.059 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+188 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:40.164 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:40.192 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:40.249 | TX  | ACK RECU a=7
+19:43:40.562 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:40.562 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+66 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:40.603 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:40.604 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+148 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:40.635 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:40.635 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame perdue : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:40.649 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:40.650 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+81 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:40.735 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:40.735 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+257 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:40.756 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:40.757 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+213 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:40.975 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:40.994 | TX  | ACK RECU a=7
+19:43:41.264 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:41.264 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+112 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:41.308 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:41.309 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+270 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:41.353 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:41.353 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+149 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:41.381 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:41.382 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+199 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:41.505 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:41.505 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+292 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:41.584 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:41.584 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame perdue : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:41.586 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:41.802 | TX  | ACK RECU a=7
+19:43:41.969 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:41.970 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+286 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:42.014 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:42.015 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal] Trame corrompue : b'~\x00\x02\x06de Repeat protocol message&\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+[Canal]  Transmission (+203 ms) : b'~\x00\x02\x06de Repeat protocol message&\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:42.054 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:42.055 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+170 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:42.221 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:42.221 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+181 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message&\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:42.227 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=FAIL
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:42.261 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:42.261 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+263 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:42.406 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:42.525 | TX  | ACK RECU a=7
+19:43:42.675 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:42.675 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+255 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:42.716 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:42.716 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+245 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:42.759 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:42.759 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+4 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:42.765 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:42.765 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+208 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:42.933 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:42.933 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+299 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:42.964 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:42.964 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+250 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:42.974 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:43.220 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:43.234 | TX  | ACK RECU a=7
+19:43:43.380 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:43.381 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+74 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:43.422 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:43.422 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+176 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:43.459 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:43.459 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+246 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:43.464 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:43.464 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+140 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:43.600 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:43.600 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+200 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:43.610 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:43.710 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:43.710 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+241 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:43.802 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:43.955 | TX  | ACK RECU a=7
+19:43:44.084 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:44.084 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+239 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:44.127 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:44.128 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+39 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:44.170 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:44.170 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+279 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:44.171 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:44.171 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+156 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:44.328 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:44.328 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+199 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:44.332 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:44.332 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+177 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:44.454 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:44.514 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:44.531 | TX  | ACK RECU a=7
+19:43:44.785 | TX  | TIMEOUT seq=1 → RETRANSMISSION
+19:43:44.786 | TX  | ENVOI <DATA seq=1 ack=5 len=100 crc=A198> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+79 ms) : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:44.828 | TX  | TIMEOUT seq=2 → RETRANSMISSION
+19:43:44.829 | TX  | ENVOI <DATA seq=2 ack=6 len=100 crc=8FF1> -> 109 octets (timeout=700 ms)
+[Canal]  Transmission (+13 ms) : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+[Canal]  Trame livrée : b'~\x00\x01\x05d\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for the Selectiv\xa1\x98~'
+19:43:44.846 | RX  | RECEPTION <DATA seq=1 ack=5 len=100 crc=A198> | CRC=OK
+19:43:44.846 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+242 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Trame livrée : b'~\x00\x02\x06de Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a \x8f\xb8\x80~'
+19:43:44.870 | RX  | RECEPTION <DATA seq=2 ack=6 len=100 crc=8FF1> | CRC=OK
+19:43:44.870 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+175 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:44.875 | TX  | TIMEOUT seq=3 → RETRANSMISSION
+19:43:44.875 | TX  | ENVOI <DATA seq=3 ack=7 len=100 crc=2D44> -> 108 octets (timeout=700 ms)
+[Canal]  Transmission (+149 ms) : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:45.029 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:45.049 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : b'~\x00\x03\x07dtest line for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat pr-D~'
+19:43:45.093 | RX  | RECEPTION <DATA seq=3 ack=7 len=100 crc=2D44> | CRC=OK
+19:43:45.093 | RX  | ACK-> <ACK seq=0 ack=7 len=0 crc=6BE3>
+[Canal]  Transmission (+98 ms) : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:45.170 | SYS | Durée limite 10s atteinte — arrêt du protocole.
+
+Transmission terminée.
+Frames envoyées : 20
+Frames retransmises : 36
+ACK reçus : 48
+Durée totale : 10.002 s
+Intégrité message : ECHEC
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+19:43:45.193 | TX  | ACK RECU a=7

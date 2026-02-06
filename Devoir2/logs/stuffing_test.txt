@@ -1,0 +1,17 @@
+Tests stuffing:
+Bits originaux : 111110000111111011111111
+Bits après stuffing : 111110000011111010111110111
+Bits après destuffing : 111110000111111011111111
+Test vecteur déterministe : OK
+Roundtrip aléatoire (200 cas) : OK
+
+Test énoncé :
+Input bits:     011111101111101111110111110
+Stuffed bits:   0111110101111100111110101111100
+Destuffed bits: 011111101111101111110111110
+Expected stuffed (énoncé): 01111101011111001111100111110101111100
+CRC orig:  0x2456
+CRC dest:  0x2456
+CRC equal: True
+Test énoncé : OK
+OK: stuffing tests

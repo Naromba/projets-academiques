@@ -1,0 +1,127 @@
+1. DIAGRAMME DE CLASSES
+Voici la version orale + schéma textuel clair : faire diagramme
+À dire à l’oral :
+« Notre protocole comporte cinq modules principaux :
+– Frame représente une trame HDLC simplifiée avec champs type, séquence, ack et CRC-16.
+– Sender implémente Selective Repeat : gestion de fenêtre de taille 4, timers individuels, retransmission ciblée.
+– Receiver gère la livraison en ordre et un buffer circulaire.
+– Canal simule pertes, erreurs de bits et délais aléatoires.
+– stuffing.py implémente le bit-stuffing HDLC après cinq bits à 1. »
+
+
+
+2. EXPLICATION SIMPLE DE CE QUE FAIT TON PROGRAMME
+ À dire à l’oral :
+« Mon programme implémente le protocole Selective Repeat avec une fenêtre de 4 trames.
+Chaque trame contient un en-tête, les données et un CRC-16.
+Avant la transmission, je fais du bit-stuffing et j’encapsule la trame avec les flags HDLC 0x7E.
+Le canal peut perdre une trame, la corrompre ou la retarder.
+Le récepteur reconstruit le message complet et renvoie des ACKs cumulatifs.
+Le sender retransmet uniquement les trames dont le timer expire. »
+
+ 
+ 
+ 3. PROCÉDURES DE TEST DES PERTES, ERREURS, BIT-FLIP
+Dans canal.py, tu as implémenté :
+✔ Perte de trame
+if tirage < self.probPerte:
+    print("[Canal]  Trame perdue")
+✔ Corruption (bit flip)
+ba[byte_idx] ^= (1 << bit_idx)
+
+À l’oral :
+« Le canal contient trois mécanismes de test :
+– Perte : la trame n’est jamais livrée.
+– Erreur : un bit est inversé, ce qui modifie le CRC.
+– Délai : le Timer provoque de vrais et faux timeouts.
+Cela me permet d’observer le comportement réel du protocole. »
+
+
+
+
+ 4. MONTRER LES TRAMES TX/RX (clé pour obtenir les points)
+Tu dois montrer les logs comme dans ton rapport
+téléinformatiques_rapport
+:
+Envoi : TX | ENVOI <DATA seq=2 ...>
+Réception : RX | RECEPTION <DATA...> CRC=OK
+Erreur : CRC=FAIL
+ACK : RX | ACK-> <ACK ack=3>
+Timeout : TX | TIMEOUT seq=2 → RETRANSMISSION
+
+
+ À dire à l’oral :
+« L’affichage est horodaté, ce qui permet de suivre chaque événement du protocole :
+envoi, réception, ACK, timeout, retransmission et reconstruction du message. »
+
+
+
+
+ 5. ILLUSTRATION — CANAL PARFAIT, BRUITÉ, INSTABLE
+Utilise les captures du rapport PDF
+téléinformatiques_rapport
+.
+✔ Scénario 1 : Canal parfait (page 2 du rapport)
+🎤 À dire :
+« Aucun CRC fail, aucun timeout, aucune retransmission : c’est le comportement optimal. »
+
+✔ Scénario 2 : Canal bruité (page 3)
+🎤 À dire :
+« On observe plusieurs CRC FAIL, pertes et retards.
+Le Selective Repeat retransmet seulement les trames concernées.
+Le temps augmente fortement. »
+
+✔ Scénario 3 : Canal instable (page 3)
+🎤 :
+« De nombreux faux timeouts se produisent car le délai dépasse le timeout.
+Le protocole reste fonctionnel mais la reconstruction peut échouer. »
+
+
+
+
+⭐ 6. BIT-STUFFING — CE QUE TU DOIS MONTRER
+Dans ton rapport (page 5)
+téléinformatiques_rapport
+:
+RAW
+STUFFED
+DESTUFFED
+CRC identique
+🎤 À dire :
+« Le stuffing insère un 0 après cinq 1 consécutifs.
+Le destuffing restitue exactement le flux.
+Le CRC avant/après est identique, preuve que l’encapsulation n’altère pas les données. »
+
+
+
+
+ 7. METTRE EN VALEUR LA QUALITÉ DU CODE (obligatoire)
+🎤 :
+« Le code est structuré, orienté objet et chaque module est autonome.
+Les classes sont fortement cohérentes :
+– Canal : simulation physique
+– Sender/Receiver : logique du protocole
+– Frame : encapsulation
+– Stuffing : encodage
+Les logs sont clairs, les timers sont gérés proprement, et le protocole respecte la segmentation, le CRC et le bit-stuffing comme demandé. »
+
+
+
+ 8. QUESTIONS POSSIBLES — AVEC RÉPONSES COURTES
+❓ Pourquoi Selective Repeat plutôt que Go-Back-N ?
+« Parce qu’en présence d’erreurs fréquentes, retransmettre uniquement les trames perdues est beaucoup plus efficace. »
+❓ Pourquoi un timeout > délaiMax ?
+« Sinon les ACK arrivent trop tard → faux timeouts → retransmissions inutiles. »
+❓ Que se passe-t-il si un ACK est perdu ?
+« Le timer expire → retransmission → le Receiver renvoie le même ACK ou ignore la trame déjà reçue. »
+❓ Pourquoi CRC-16 ?
+« Très léger et suffisamment robuste pour une détection d’erreur > 99.998%. »
+ 
+
+
+ 6400 octets = ≈ 65 Frames 
+# Ligne 18 : Taille max des données dans UNE trame
+MAX_PAYLOAD = 100
+
+# Ligne 219 : Découpage du message complet
+chunks = [data[i:i+MAX_PAYLOAD] for i in range(0, len(data), MAX_PAYLOAD)]

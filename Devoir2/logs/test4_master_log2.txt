@@ -1,0 +1,57 @@
+
+--- Run: delai=50 run=1 → logs/test4_del50_run1.txt ---
+
+[Canal]  Trame livrée : <ACK seq=0 ack=7 len=0 crc=6BE3>
+18:30:40.989 | TX  | ACK RECU a=7
+[Canal]  Trame livrée : <ACK seq=0 ack=0 len=0 crc=F274>
+18:30:40.989 | TX  | ACK RECU a=0
+[Canal]  Trame livrée : <ACK seq=0 ack=1 len=0 crc=C145>
+18:30:40.995 | TX  | ACK RECU a=1
+[Canal]  Trame livrée : <ACK seq=0 ack=2 len=0 crc=9416>
+18:30:41.011 | TX  | ACK RECU a=2
+[Canal]  Trame livrée : b'~\x00\x04\x00dline for the Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protoco\x8b\xe6\x80~'
+18:30:41.014 | RX  | RECEPTION <DATA seq=4 ack=0 len=100 crc=97DA> | CRC=OK
+18:30:41.014 | RX  | ACK-> <ACK seq=0 ack=4 len=0 crc=3EB0>
+[Canal]  Transmission (+28 ms) : <ACK seq=0 ack=4 len=0 crc=3EB0>
+[Canal]  Trame livrée : b'~\x00\x05\x01dl message.\nThis is a test line for the Selective Repeat protocol message.\nThis is a test line for th\x89\xf4\x00~'
+18:30:41.016 | RX  | RECEPTION <DATA seq=5 ack=1 len=100 crc=89F8> | CRC=OK
+18:30:41.016 | RX  | ACK-> <ACK seq=0 ack=5 len=0 crc=0D81>
+[Canal]  Transmission (+47 ms) : <ACK seq=0 ack=5 len=0 crc=0D81>
+[Canal]  Trame livrée : b'~\x00\x06\x02de Selective Repeat protocol message.\nThis is a test line for the Selective Repeat protocol message.\n\xf1\x91~'
+18:30:41.018 | RX  | RECEPTION <DATA seq=6 ack=2 len=100 crc=F191> | CRC=OK
+18:30:41.018 | RX  | ACK-> <ACK seq=0 ack=6 len=0 crc=58D2>
+[Canal]  Transmission (+18 ms) : <ACK seq=0 ack=6 len=0 crc=58D2>
+[Canal]  Trame livrée : <ACK seq=0 ack=3 len=0 crc=A727>
+18:30:41.025 | TX  | ACK RECU a=3
+[Canal]  Trame livrée : <ACK seq=0 ack=4 len=0 crc=3EB0>
+18:30:41.041 | TX  | ACK RECU a=4
+[Canal]  Trame livrée : <ACK seq=0 ack=5 len=0 crc=0D81>
+18:30:41.046 | TX  | ACK RECU a=5
+[Canal]  Trame livrée : <ACK seq=0 ack=6 len=0 crc=58D2>
+18:30:41.068 | TX  | ACK RECU a=6
+
+--- Run: delai=50 run=2 → logs/test4_del50_run2.txt ---
+
+
+--- Run: delai=50 run=3 → logs/test4_del50_run3.txt ---
+
+
+--- Run: delai=180 run=1 → logs/test4_del180_run1.txt ---
+
+
+--- Run: delai=180 run=2 → logs/test4_del180_run2.txt ---
+
+
+--- Run: delai=180 run=3 → logs/test4_del180_run3.txt ---
+
+
+--- Run: delai=300 run=1 → logs/test4_del300_run1.txt ---
+
+
+--- Run: delai=300 run=2 → logs/test4_del300_run2.txt ---
+
+
+--- Run: delai=300 run=3 → logs/test4_del300_run3.txt ---
+
+
+All Test 4 runs finished.

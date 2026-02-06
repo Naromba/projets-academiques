@@ -1,0 +1,51 @@
+@startuml ProtocoleSelectiveRepeat
+!define DIRECTIONMARKER
+skinparam classBackgroundColor #FEFECE
+skinparam classBorderColor #D82747
+skinparam arrowColor #667eea
+
+class Frame {
+  {field} +seq
+  {field} +acknum
+  {field} +is_ack
+  {field} +payload
+  {field} +length
+  {field} +crc
+  {field} +donnees
+  {method} -__init__(seq, acknum, is_ack, payload)
+  {method} +to_raw_bytes()
+  {method} +to_stuffed_bytes()
+  {method} +from_stuffed_bytes(cls, data)
+  {method} +header_bytes()
+  {method} +verify_crc()
+  {method} -__repr__()
+}
+
+class Receiver {
+  {method} -__init__(canal, stats)
+  {method} +on_from_sender(frame)
+  {method} -_to_sender(ack_frame)
+  {method} -_in_window(start, x)
+  {method} +bind_sender_ack(ack_cb)
+  {method} +message_bytes()
+}
+
+class Sender {
+  {method} -__init__(canal, timeout_ms, stats)
+  {method} +send_message(data, receiver)
+  {method} -_free_slots()
+  {method} -_send_with_timer(frame)
+  {method} -_on_timeout(seq)
+  {method} +on_ack_from_rx(ack_frame)
+  {method} -_to_receiver(frame)
+  {method} +bind_receiver(rx_cb)
+}
+
+
+' Dépendances
+Sender --> Canal : "utilise"
+Receiver --> Canal : "utilise"
+Sender --> Frame : "crée/envoie"
+Receiver --> Frame : "reçoit"
+
+@enduml
