@@ -1,0 +1,47 @@
+
+==============================
+   Résultats pour : query
+==============================
+
+
+ -- Resultats PLAST --
+
+Sequence : M|cat|Carica_papaya
+Bitscore : 73
+E-value  : 2.4599721436572523e-16
+Input    : [21:73]
+DB       : [21:73]
+Align input : TACTCATCAGGCTCATGACCTGAAGACTGCAGGTTCGAATCCTGTCCCCGCCT
+Align db    : GACTCATCAGGCTCATGACCTGAAGACTGCAGGTTCGAATCCTGTCCCCGCCT
+
+Sequence : M|cat|Oryza_sativa_Japonica_Group
+Bitscore : 73
+E-value  : 2.4599721436572523e-16
+Input    : [21:73]
+DB       : [21:73]
+Align input : TACTCATCAGGCTCATGACCTGAAGACTGCAGGTTCGAATCCTGTCCCCGCCT
+Align db    : AACTCATCAGGCTCATGACCTGAAGACTGCAGGTTCGAATCCTGTCCCCGCCT
+
+Sequence : M|cat|Vitis_vinifera_2
+Bitscore : 71
+E-value  : 9.83988857462901e-16
+Input    : [21:73]
+DB       : [21:73]
+Align input : TACTCATCAGGCTCATGACCTGAAGACTGCAGGTTCGAATCCTGTCCCCGCCT
+Align db    : GACTCATCAGGCCCATGACCTGAAGACTGCAGGTTCGAATCCTGTCCCCGCCT
+
+Sequence : M|cat|Arabidopsis_thaliana
+Bitscore : 66
+E-value  : 3.148764343881283e-14
+Input    : [21:71]
+DB       : [21:71]
+Align input : TACTCATCAGGCTCATGACCTGAAGACTGCAGGTTCGAATCCTGTCCCCGC
+Align db    : AACTCATCAGGCTCATGACCTGAAGATTACAGGTTCGAATCCTGTCCCCGC
+
+Sequence : M|cat|Bracteacoccus_minor_2
+Bitscore : 32
+E-value  : 0.0005409535951912403
+Input    : [11:40]
+DB       : [10:39]
+Align input : GGAATTGGTTTACTCATCAGGCTCATGACC
+Align db    : AGTAGTGGTTAACTCATCGGGCTCATGACC

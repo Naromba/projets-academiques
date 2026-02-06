@@ -1,0 +1,15 @@
+
+==============================
+   Résultats pour : query
+==============================
+
+
+ -- Resultats PLAST --
+
+Sequence : I|gat|Mesostigma_viride
+Bitscore : 24
+E-value  : 0.07672768831253052
+Input    : [13:33]
+DB       : [23:43]
+Align input : CGCATACGCTTGATAAGCGTA
+Align db    : AGTATACGCCTGATAAGCGTA

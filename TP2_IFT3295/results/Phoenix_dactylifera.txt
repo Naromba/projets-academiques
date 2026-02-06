@@ -1,0 +1,31 @@
+
+==============================
+   Résultats pour : query
+==============================
+
+
+ -- Resultats PLAST --
+
+Sequence : P|tgg|Oryza_sativa_Japonica_Group
+Bitscore : 40
+E-value  : 2.1130999812157825e-06
+Input    : [43:73]
+DB       : [43:73]
+Align input : GAGGTCACGGGTTCAAATCCTGTCATCCCTA
+Align db    : AATGTCACGGGTTCAAATCCTGTCATCCCTA
+
+Sequence : P|tgg|Sorghum_bicolor
+Bitscore : 40
+E-value  : 2.1130999812157825e-06
+Input    : [43:73]
+DB       : [43:73]
+Align input : GAGGTCACGGGTTCAAATCCTGTCATCCCTA
+Align db    : AATGTCACGGGTTCAAATCCTGTCATCCCTA
+
+Sequence : P|tgg|Vitis_vinifera
+Bitscore : 38
+E-value  : 8.45239992486313e-06
+Input    : [43:73]
+DB       : [43:73]
+Align input : GAGGTCACGGGTTCAAATCCTGTCATCCCTA
+Align db    : AATGTCACGGGTTCCAATCCTGTCATCCCTA

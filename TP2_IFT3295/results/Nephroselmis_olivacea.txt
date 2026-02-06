@@ -1,0 +1,31 @@
+
+==============================
+   Résultats pour : query
+==============================
+
+
+ -- Resultats PLAST --
+
+Sequence : R|tcg|Marchantia_polymorpha
+Bitscore : 85
+E-value  : 6.005791366350714e-20
+Input    : [0:71]
+DB       : [0:71]
+Align input : ACATCCTTAGCTCAGTAGGATAGAGCAACAGCCTTCTAAGCTGGTGGTCACAGGTTCAAATCCTGTAGGATG
+Align db    : GCATTCTTAGCTCAGTTGGATAGAGCAACAACCTTCGAAGTTGATGGTCACAGGTTCAAATCCTGTAGGATG
+
+Sequence : R|tct|Mesostigma_viride
+Bitscore : 53
+E-value  : 2.579467750507547e-10
+Input    : [0:43]
+DB       : [0:43]
+Align input : ACATCCTTAGCTCAGTAGGATAGAGCAACAGCCTTCTAAGCTGG
+Align db    : ACATTCTTAGCTCAGTTGGATAGAGCAACGGCCTTCTAAGCTGT
+
+Sequence : R|tct|Marchantia_polymorpha
+Bitscore : 37
+E-value  : 1.690479984972626e-05
+Input    : [0:29]
+DB       : [0:29]
+Align input : ACATCCTTAGCTCAGTAGGATAGAGCAACA
+Align db    : GCATTCTTAGCTCAGTTGGATAGAGCAACA
